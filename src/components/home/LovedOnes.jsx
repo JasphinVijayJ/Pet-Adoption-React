@@ -13,7 +13,7 @@ export default function LovedOnes() {
                     friend. Whether it’s a playful pup or a cuddly kitten, there’s a
                     perfect pet waiting to become part of your family.
                 </p>
-                <Link to="pets" className="button-1" ><b>Apply Today</b></Link>
+                <Link to="/pets" className="button-1" ><b>Apply Today</b></Link>
             </div>
         </section>
     )

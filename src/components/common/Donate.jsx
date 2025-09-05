@@ -18,7 +18,7 @@ export default function Donate() {
                     vaccinate, rescue, and foster stray cats and dogs.
                 </p>
 
-                <Link to="contact" className="button-1" ><b>Contact Us</b></Link>
+                <Link to="/contact" className="button-1" ><b>Contact Us</b></Link>
             </div>
 
             <div className="donate-img">

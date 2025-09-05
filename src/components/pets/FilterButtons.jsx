@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 export default function FilterButtons({ activeFilter, setFilter }) {
     const buttons = [
         { id: 'allbtn', label: 'All', type: 'all' },

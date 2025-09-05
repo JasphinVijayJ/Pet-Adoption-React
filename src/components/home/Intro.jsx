@@ -7,7 +7,7 @@ export default function Intro() {
                 <h1 className="gradient-highlight">Looking for a New Best Friend?</h1>
                 <p>Thousands of pets are waiting to meet you. Adopt today and change a life—maybe even your own.</p>
 
-                <Link to="pets" className='button-1'><b>View Pets</b></Link>
+                <Link to="/pets" className='button-1'><b>View Pets</b></Link>
             </div>
         </section>
     )
