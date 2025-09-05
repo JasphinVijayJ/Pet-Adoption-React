@@ -1,0 +1,182 @@
+/* Most Common Used */
+.gradient-highlight {
+  background: linear-gradient(to right, #ee0979, #ff6a00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* -------------------------------------------------------------- */
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  color: #555;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 80px;
+}
+
+/* -------------------------------------------------------------- */
+
+/* Scroll To Top */
+#scrollArrow {
+  position: fixed;
+  z-index: 3;
+  right: 30px;
+  bottom: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#scrollArrow>img {
+  width: 50px;
+  transition: transform 0.3s;
+}
+
+#scrollArrow>img:hover {
+  transform: scale(1.2);
+}
+
+/* -------------------------------------------------------------- */
+
+/* AdoptionProcess.jsx */
+.Adoption-Process {
+  margin-top: 100px;
+}
+
+.Adoption-Process>h3 {
+  text-align: center;
+  color: deeppink;
+  font-size: 20px;
+}
+
+.heading-h1-1 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.process {
+  display: flex;
+  gap: 40px;
+  margin: 0px 30px;
+  justify-content: center;
+}
+
+.process-divs {
+  max-width: 340px;
+  border: 2px lightgray solid;
+  background: #f9f9f9;
+  border-radius: 16px;
+  padding: 30px;
+  transition: transform 0.3s ease;
+}
+
+.process-divs:hover {
+  transform: scale(1.04);
+}
+
+.process-divs img {
+  width: 100%;
+  height: 240px;
+  border-radius: 30px;
+}
+
+.process-divs h2 {
+  text-align: center;
+}
+
+/* -------------------------------------------------------------- */
+
+/* Donate.jsx */
+.donate-section {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 40px;
+}
+
+.donate-content {
+  width: 100%;
+  max-width: 640px;
+}
+
+.donate-content>h2 {
+  font-size: 45px;
+}
+
+.donate-content>button {
+  margin-top: 15px;
+}
+
+.donate-img>img {
+  height: 400px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+/* -------------------------------------------------------------- */
+
+@media screen and (max-width:800px) {
+  .Adoption-Process {
+    margin-top: 60px;
+  }
+
+  .heading-h1-1 {
+    font-size: 30px;
+  }
+
+  .process {
+    gap: 15px;
+    margin: 0px 20px;
+  }
+
+  .process-divs {
+    padding: 15px;
+  }
+
+  .process-divs>h2 {
+    font-size: 16px;
+  }
+
+  .process-divs>p {
+    font-size: 14px;
+  }
+
+  .donate-content>h2 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .process {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0px 40px;
+  }
+
+  .process-divs>h2 {
+    font-size: 18px;
+  }
+
+  .donate-section {
+    margin: 40px 20px;
+  }
+
+  .donate-content>h2 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width:460px) {
+  .heading-h1-1 {
+    font-size: 25px;
+  }
+
+  .donate-section {
+    flex-wrap: wrap;
+    margin: 30px;
+  }
+}
+
+/* -------------------------------------------------------------- */

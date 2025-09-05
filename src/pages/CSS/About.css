@@ -1,0 +1,120 @@
+/* Mission.jsx */
+
+/* Background Image */
+.about-banner {
+    background: url("../../assets/Images/dog-4.jpg") no-repeat center center/cover;
+    height: 380px;
+}
+
+.about-banner h1 {
+    font-size: 50px;
+    position: absolute;
+    top: 140px;
+    left: 220px;
+}
+
+/* -------------------------------------------------------------- */
+
+.our-mission {
+    margin-top: 70px;
+    width: 100%;
+    box-shadow: 0px 0px 8px lightgray;
+    background-color: #f1ccf0;
+    padding: 1px 0px 40px;
+}
+
+.mission-para {
+    width: 100%;
+    max-width: 750px;
+    justify-self: center;
+}
+
+.mission-para>p {
+    padding: 0px 30px;
+}
+
+/* -------------------------------------------------------------- */
+
+/* WhoWeAre.jsx and OurPromise.jsx */
+.who-and-promise {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 80px 30px 0;
+}
+
+.who-and-promise>div {
+    width: 100%;
+    max-width: 620px;
+}
+
+.who-and-promise>div>img {
+    width: 100%;
+    max-width: 600px;
+    height: 600px;
+}
+
+.who-and-promise>div>h1 {
+    margin: 60px 0 20px;
+}
+
+.ul-icon {
+    list-style-type: none;
+}
+
+.ul-icon>li {
+    display: flex;
+    margin-top: 15px;
+}
+
+.ul-icon>li>img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+/* -------------------------------------------------------------- */
+
+@media screen and (max-width:800px) {
+    .about-banner h1 {
+        left: 130px;
+    }
+
+    .who-and-promise>div>img {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .about-banner h1 {
+        left: 120px;
+    }
+
+    .who-and-promise {
+        flex-wrap: wrap;
+    }
+
+    .who-and-promise>div>h1 {
+        margin-top: 0px;
+    }
+
+    .ul-icon {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width:470px) {
+    .about-banner h1 {
+        left: 90px;
+    }
+
+    .who-and-promise>div>img {
+        height: 300px;
+    }
+
+    .ul-icon {
+        padding-left: 10px;
+    }
+}
+
+/* -------------------------------------------------------------- */

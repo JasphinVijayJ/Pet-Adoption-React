@@ -1,0 +1,135 @@
+/* Benefits.jsx */
+
+/* Background Image */
+.services-banner {
+    background: url('../../assets/Images/cat-1.jpg') no-repeat center center/cover;
+    height: 400px;
+    position: relative;
+}
+
+.services-banner h1 {
+    position: absolute;
+    font-size: 50px;
+    top: 90px;
+    left: 280px;
+}
+
+/* -------------------------------------------------------------- */
+
+.benefits-section {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 100px 30px 0;
+}
+
+.benefits-img>img {
+    width: 550px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.benefits {
+    width: 100%;
+    max-width: 600px;
+    padding-left: 20px;
+}
+
+.benefits>h2 {
+    margin: 30px 0 20px;
+}
+
+.benefits-content {
+    padding-left: 20px;
+}
+
+.benefits-content>h4>img {
+    width: 17px;
+    height: 17px;
+    margin-right: 10px;
+}
+
+.benefits-content>h4 {
+    margin-bottom: 0;
+}
+
+.benefits-content>p {
+    margin-top: 6px;
+    padding-left: 50px;
+}
+
+/* -------------------------------------------------------------- */
+
+/* OurServices.jsx */
+.services {
+    margin-top: 100px;
+}
+
+.heading-h3-1 {
+    text-align: center;
+    color: deeppink;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin: 60px 20px 0;
+}
+
+.service-card {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0px 0px 8px lightgray;
+    border-radius: 10px;
+    padding: 40px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.04);
+}
+
+.service-card>img {
+    width: 60px;
+}
+
+/* -------------------------------------------------------------- */
+
+@media screen and (max-width:930px) {
+    .services-banner h1 {
+        left: 170px;
+    }
+
+    .benefits-section {
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+}
+
+
+@media screen and (max-width:650px) {
+    .services-banner h1 {
+        left: 100px;
+    }
+
+    .benefits-img>img {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .services-banner h1 {
+        top: 120px;
+        left: 60px;
+        font-size: 40px;
+    }
+
+    .benefits-img>img {
+        max-width: 400px;
+    }
+}
+
+/* -------------------------------------------------------------- */

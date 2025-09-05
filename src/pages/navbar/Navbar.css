@@ -1,0 +1,114 @@
+/* Navbar container */
+.nav-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 60px;
+    background-color: white;
+    border-bottom: 2px solid lightgray;
+    /* Fixed at top */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Logo image */
+.nav-section>img {
+    height: 80px;
+    width: auto;
+}
+
+.nav-top {
+    display: flex;
+    column-gap: 60px;
+}
+
+.nav-top a {
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+    font-weight: 500;
+    transition: transform 0.4s ease;
+}
+
+.nav-top a:hover {
+    transform: scale(1.1);
+    color: deeppink;
+    background-color: #f9f9f9;
+}
+
+/* -------------------------------------------------------------- */
+
+/* Hamburger menu - hidden by default */
+.menu {
+    display: none;
+    flex-direction: column;
+    width: 35px;
+    gap: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu:hover {
+    transform: rotate(360deg);
+}
+
+.menu div {
+    height: 4px;
+    background: linear-gradient(to right, #ee0979, #ff6a00);
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.menu div:hover {
+    transform: rotate(360deg);
+}
+
+@media screen and (max-width:760px) {
+    .nav-section {
+        padding: 0px 30px;
+    }
+
+    .nav-top {
+        column-gap: 40px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .nav-section {
+        padding-right: 40px;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .nav-top {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        border-top: 2px solid lightgray;
+    }
+
+    .nav-top.show {
+        display: flex;
+    }
+
+    .nav-top a {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .nav-top a:last-child {
+        border-bottom: none;
+    }
+}
+
+/* -------------------------------------------------------------- */

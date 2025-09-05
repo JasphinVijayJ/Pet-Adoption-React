@@ -1,0 +1,169 @@
+/* ContactInfo.jsx */
+
+/* Background Image */
+.contact-banner {
+    background: url('../../assets/Images/dog-1.avif') no-repeat center center/cover;
+    height: 350px;
+    position: relative;
+}
+
+.contact-banner h1 {
+    position: absolute;
+    font-size: 50px;
+    top: 90px;
+    left: 280px;
+}
+
+/* -------------------------------------------------------------- */
+
+.contact-section {
+    margin-top: 80px;
+    padding: 0px 10px;
+}
+
+.contact-box {
+    box-shadow: 0 0px 8px lightgray;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    padding: 20px;
+    padding-right: 0px;
+    transition: transform 0.3s ease;
+    color: #555;
+}
+
+.contact-box:hover {
+    transform: scale(1.04);
+}
+
+/* -------------------------------------------------------------- */
+
+/* ContactForm.jsx */
+.form-section {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px 50px 40px;
+    justify-self: center;
+    text-align: center;
+    box-shadow: 0px 0px 8px lightgray;
+    border-radius: 16px;
+    margin: 50px 0;
+}
+
+.form-section>h2 {
+    font-size: 45px;
+    margin: 0;
+}
+
+.top-span {
+    border-bottom: 3px solid #ff9472;
+    border-radius: 1px;
+}
+
+.input-group>input,
+textarea {
+    width: 100%;
+    max-width: 550px;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 20px;
+    border: 2px solid lightgray;
+    border-radius: 15px;
+    outline: none;
+    resize: none;
+}
+
+.input-group>input:focus,
+.input-group>textarea:focus {
+    border-bottom: 3px solid #f2709c;
+}
+
+.input-group>small {
+    color: red;
+    font-weight: 600;
+}
+
+.button-1 {
+    width: 100%;
+    max-width: 300px;
+    padding: 16px;
+    color: white;
+    background: linear-gradient(to right, #f2709c, #ff9472);
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.button-1:hover {
+    background: linear-gradient(to left, #f2709c, #ff9472);
+    box-shadow: 1px 1px 8px rgba(240, 129, 59, 0.6);
+}
+
+/* -------------------------------------------------------------- */
+
+@media screen and (max-width:800px) {
+    .contact-banner h1 {
+        left: 160px;
+    }
+
+    .contact-box {
+        max-width: 280px;
+    }
+
+    .form-section {
+        max-width: 400px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .input-group>input,
+    textarea {
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .contact-banner h1 {
+        left: 60px;
+    }
+
+    .form-section {
+        max-width: 300px;
+    }
+
+    .input-group>input,
+    textarea {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .contact-banner {
+        height: 280px;
+    }
+
+    .contact-banner h1 {
+        font-size: 40px;
+        left: 40px;
+    }
+
+    .form-section {
+        max-width: 250px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .form-section>h2 {
+        font-size: 35px;
+    }
+
+    .input-group>input,
+    textarea {
+        max-width: 200px;
+        padding: 10px;
+    }
+}
+
+/* -------------------------------------------------------------- */
