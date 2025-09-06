@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename='/Pet-Adoption-React'>
+    <BrowserRouter basename='/Pet-Adoption-React/'>
       <App />
     </BrowserRouter>
   </StrictMode>,
