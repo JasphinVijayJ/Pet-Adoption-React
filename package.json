@@ -1,4 +1,5 @@
 {
+  "homepage": "https://jasphinvijayj.github.io/Pet-Adoption-React",
   "name": "pet-adoption-react",
   "private": true,
   "version": "0.0.0",
@@ -8,6 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
