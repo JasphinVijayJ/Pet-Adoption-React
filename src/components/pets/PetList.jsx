@@ -52,12 +52,15 @@ const pets = [
 
 
 export default function PetList({ filter }) {
-    return (
-        <section className="pet-list">
-            {pets.filter((pet) => {
+
+    const filteredPets = pets.filter((pet) => {
                 if (filter === "all" || pet.type === filter) return true;
                 else return false;
-            }).map((pet) => {
+            }); // .filter() uses that boolean to decide whether to keep the pet or not.
+            
+    return (
+        <section className="pet-list">
+            {filteredPets.map((pet) => {
                 return (
                     <div key={pet.id} className={`pet-card ${pet.type}`}>
                         <img src={pet.img} alt={pet.name + "-image"} />

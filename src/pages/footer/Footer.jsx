@@ -5,45 +5,48 @@ import ClockIcon from '../../assets/Icons/Clock_Icon.png'
 import { Link } from 'react-router'
 
 export default function Footer() {
+    const infoBoxes = [
+        {
+            id: 1,
+            icon: LocationIcon,
+            title: "Address",
+            details: ["Saravana Gens Hostel, Velachery,", "Chennai, 600042."]
+        },
+        {
+            id: 2,
+            icon: PhoneIcon,
+            title: "Contact Us",
+            details: ["Email: jasphinvijayj@gmail.com", "Phone: 7339372547"]
+        },
+        {
+            id: 3,
+            icon: ClockIcon,
+            title: "Working Hours",
+            details: ["Mon - Fri: 9am - 8pm", "Sat - Sun: Closed"]
+        }
+    ];
+
     return (
         <footer>
             <h1 className="gradient-highlight">Adopt & Love</h1>
 
             <section className="footer-list">
-                <div className="footer-box">
-                    <div>
-                        <img src={LocationIcon} alt="Location Icon" />
-                    </div>
-                    <div className="footer-details">
-                        <h3>Address</h3>
-                        <p>
-                            Saravana Gens Hostel, Velachery, <br />
-                            Chennai, 600042.
-                        </p>
-                    </div>
-                </div>
-
-                <div className="footer-box">
-                    <div>
-                        <img src={PhoneIcon} alt="Phone Icon" />
-                    </div>
-                    <div className="footer-details">
-                        <h3>Contact Us</h3>
-                        <p>Email: jasphinvijayj@gmail.com</p>
-                        <p>Phone: 7339372547</p>
-                    </div>
-                </div>
-
-                <div className="footer-box">
-                    <div>
-                        <img src={ClockIcon} alt="Clock Icon" />
-                    </div>
-                    <div className="footer-details">
-                        <h3>Working Hours</h3>
-                        <p>Mon - Fri: 9am - 8pm</p>
-                        <p>Sat - Sun: Closed</p>
-                    </div>
-                </div>
+                {infoBoxes.map((box) => {
+                    return (
+                        <div key={box.id} className="footer-box">
+                            <div>
+                                <img src={box.icon} alt={`${box.title}-icon`} />
+                            </div>
+                            
+                            <div className="footer-details">
+                                <h3>{box.title}</h3>
+                                {box.details.map((line, index) => (
+                                    <p key={index}>{line}</p>
+                                ))}
+                            </div>
+                        </div>
+                    );
+                })}
             </section>
 
             <nav className="nav-bottom">

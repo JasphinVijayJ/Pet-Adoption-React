@@ -37,6 +37,7 @@ export default function ContactInfo() {
                             <div>
                                 <img src={box.icon} alt={`${box.title}-icon`} />
                             </div>
+
                             <div className="footer-details">
                                 <h3>{box.title}</h3>
                                 {box.details.map((line, index) => (
