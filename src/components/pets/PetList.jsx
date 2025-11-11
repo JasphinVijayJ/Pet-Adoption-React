@@ -54,10 +54,10 @@ const pets = [
 export default function PetList({ filter }) {
 
     const filteredPets = pets.filter((pet) => {
-                if (filter === "all" || pet.type === filter) return true;
-                else return false;
-            }); // .filter() uses that boolean to decide whether to keep the pet or not.
-            
+        if (filter === "all" || pet.type === filter) return true;
+        else return false;
+    }); // .filter() uses that boolean to decide whether to keep the pet or not.
+
     return (
         <section className="pet-list">
             {filteredPets.map((pet) => {
@@ -72,7 +72,6 @@ export default function PetList({ filter }) {
                     </div>
                 );
             })}
-
         </section>
     )
 }

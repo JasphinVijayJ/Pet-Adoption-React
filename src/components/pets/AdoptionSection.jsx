@@ -1,5 +1,12 @@
 import PawPrintIcon3 from '../../assets/Icons/Paw-Print-Icon-3.png'
 
+const adoptionExpectations = [
+    "All pets are vaccinated and neutered/spayed",
+    "Each pet receives a full veterinary health check-up",
+    "We help match you with the right pet for your lifestyle",
+    "We provide post-adoption support for a smooth transition"
+];
+
 export default function AdoptionSection() {
     return (
         <>
@@ -24,14 +31,11 @@ export default function AdoptionSection() {
                     <h3>Ready for Adoption – What You Can Expect</h3>
 
                     <ul className="ul-icon">
-                        <li><img src={PawPrintIcon3} alt="Paw-Print-Icon-3-image" />All pets are vaccinated
-                            and neutered/spayed</li>
-                        <li><img src={PawPrintIcon3} alt="Paw-Print-Icon-3-image" />Each pet receives a
-                            full veterinary health check-up</li>
-                        <li><img src={PawPrintIcon3} alt="Paw-Print-Icon-3-image" />We help match you with
-                            the right pet for your lifestyle</li>
-                        <li><img src={PawPrintIcon3} alt="Paw-Print-Icon-3-image" />We provide
-                            post-adoption support for a smooth transition</li>
+                        {adoptionExpectations.map((point, index) => (
+                            <li key={index}>
+                                <img src={PawPrintIcon3} alt="Paw-Print-Icon-3-image" /> {point}
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </section>

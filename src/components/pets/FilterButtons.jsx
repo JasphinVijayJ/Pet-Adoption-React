@@ -1,11 +1,11 @@
-export default function FilterButtons({ activeFilter, setFilter }) {
-    const buttons = [
-        { id: 'allbtn', label: 'All', type: 'all' },
-        { id: 'dogsbtn', label: 'Dogs', type: 'dogs' },
-        { id: 'catsbtn', label: 'Cats', type: 'cats' },
-        { id: 'othersbtn', label: 'Others', type: 'others' },
-    ];
+const buttons = [
+    { id: 'allbtn', label: 'All', type: 'all' },
+    { id: 'dogsbtn', label: 'Dogs', type: 'dogs' },
+    { id: 'catsbtn', label: 'Cats', type: 'cats' },
+    { id: 'othersbtn', label: 'Others', type: 'others' },
+];
 
+export default function FilterButtons({ activeFilter, setFilter }) {
     return (
         <div className="filter-buttons">
             {buttons.map(btn => (

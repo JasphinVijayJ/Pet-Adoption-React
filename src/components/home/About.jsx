@@ -1,6 +1,25 @@
 import PawPrint from '../../assets/Icons/Paw-Print-Icon-1.png'
 import AllPets from '../../assets/Images/dogs_cats_rabbits_pets.jpg'
 
+const valuesData = [
+    {
+        boldText: "Love & Care",
+        normalText: "Every animal is treated with kindness, respect, and medical attention."
+    },
+    {
+        boldText: "Perfect Matches",
+        normalText: "We help match pets with homes where they'll be loved for life."
+    },
+    {
+        boldText: "Rescue & Rehabilitation",
+        normalText: "From rescue to recovery, we stand by our animals."
+    },
+    {
+        boldText: "Safe Adoptions",
+        normalText: "Our process is simple, transparent, and focused on long-term happiness."
+    }
+];
+
 export default function About() {
     return (
         <section className="about-section">
@@ -21,26 +40,13 @@ export default function About() {
 
                 <h3>What We Stand For</h3>
                 <ul className="about-ul">
-                    <li>
-                        <img src={PawPrint} alt="Paw Icon" />
-                        <b>Love & Care:</b> Every animal is treated with kindness, respect,
-                        and medical attention.
-                    </li>
-                    <li>
-                        <img src={PawPrint} alt="Paw Icon" />
-                        <b>Perfect Matches:</b> We help match pets with homes where they’ll
-                        be loved for life.
-                    </li>
-                    <li>
-                        <img src={PawPrint} alt="Paw Icon" />
-                        <b>Rescue & Rehabilitation:</b> From rescue to recovery, we stand by
-                        our animals.
-                    </li>
-                    <li>
-                        <img src={PawPrint} alt="Paw Icon" />
-                        <b>Safe Adoptions:</b> Our process is simple, transparent, and
-                        focused on long-term happiness.
-                    </li>
+
+                    {valuesData.map((item, index) => (
+                        <li key={index}>
+                            <img src={PawPrint} alt="Paw-Print-Icon" />
+                            <b>{item.boldText}:</b> {item.normalText}
+                        </li>
+                    ))}
                 </ul>
             </div>
 

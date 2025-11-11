@@ -1,6 +1,13 @@
 import PawPrint3 from '../../assets/Icons/Paw-Print-Icon-3.png'
 import Dog6 from '../../assets/Images/dog-6.avif'
 
+const promisePoints = [
+    "Prioritize pet well-being above all",
+    "Provide a safe and supportive platform for both adopters and rehomers",
+    "Encourage responsible, lifelong adoptions",
+    "Reduce shelter strain and promote ethical rehoming"
+];
+
 export default function OurPromise() {
     return (
         <section className="who-and-promise">
@@ -16,10 +23,11 @@ export default function OurPromise() {
                 </p>
 
                 <ul className="ul-icon">
-                    <li><img src={PawPrint3} alt="Paw Icon" /> Prioritize pet well-being above all</li>
-                    <li><img src={PawPrint3} alt="Paw Icon" /> Provide a safe and supportive platform for both adopters and rehomers</li>
-                    <li><img src={PawPrint3} alt="Paw Icon" /> Encourage responsible, lifelong adoptions</li>
-                    <li><img src={PawPrint3} alt="Paw Icon" /> Reduce shelter strain and promote ethical rehoming</li>
+                    {promisePoints.map((point, index) => (
+                        <li key={index}>
+                            <img src={PawPrint3} alt="Paw-Print-Icon-3" /> {point}
+                        </li>
+                    ))}
                 </ul>
             </div>
         </section>

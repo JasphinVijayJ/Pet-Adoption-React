@@ -1,6 +1,13 @@
 import PawPrint2 from '../../assets/Icons/Paw-Print-Icon-2.png'
 import Dog7 from '../../assets/Images/dog-7.avif'
 
+const whoWeArePoints = [
+    "Safe, ethical rehoming",
+    "Direct connections between owners and adopters",
+    "Supportive tools to help make informed adoption decisions",
+    "Less pressure on shelters by promoting direct adoption"
+];
+
 export default function WhoWeAre() {
     return (
         <section className="who-and-promise">
@@ -17,15 +24,16 @@ export default function WhoWeAre() {
                 </p>
 
                 <ul className="ul-icon">
-                    <li><img src={PawPrint2} alt="Paw Icon" /> Safe, ethical rehoming</li>
-                    <li><img src={PawPrint2} alt="Paw Icon" /> Direct connections between owners and adopters</li>
-                    <li><img src={PawPrint2} alt="Paw Icon" /> Supportive tools to help make informed adoption decisions</li>
-                    <li><img src={PawPrint2} alt="Paw Icon" /> Less pressure on shelters by promoting direct adoption</li>
+                    {whoWeArePoints.map((point, index) => (
+                        <li key={index}>
+                            <img src={PawPrint2} alt="Paw-Print-Icon-2" /> {point}
+                        </li>
+                    ))}
                 </ul>
             </div>
 
             <div>
-                <img src={Dog7} alt="Dog" />
+                <img src={Dog7} alt="Dog-7" />
             </div>
         </section>
     )
