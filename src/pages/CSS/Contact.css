@@ -87,7 +87,7 @@ textarea {
     height: 2px;
 }
 
-.button-1 {
+.button-2 {
     width: 100%;
     max-width: 300px;
     padding: 16px;
@@ -100,7 +100,7 @@ textarea {
     cursor: pointer;
 }
 
-.button-1:hover {
+.button-2:hover {
     background: linear-gradient(to left, #f2709c, #ff9472);
     box-shadow: 1px 1px 8px rgba(240, 129, 59, 0.6);
 }

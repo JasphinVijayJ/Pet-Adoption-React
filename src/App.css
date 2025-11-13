@@ -40,6 +40,25 @@ body {
 
 /* -------------------------------------------------------------- */
 
+/* Common Button */
+.button-1 {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    width: 180px;
+    padding: 18px 0px;
+    font-size: 15px;
+    border-radius: 25px;
+    background-color: tomato;
+    color: white;
+}
+
+.button-1:hover {
+    background-color: #f74d2f;
+}
+
+/* -------------------------------------------------------------- */
+
 /* AdoptionProcess.jsx */
 .Adoption-Process {
   margin-top: 100px;

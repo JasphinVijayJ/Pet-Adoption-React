@@ -126,7 +126,7 @@ export default function ContactForm() {
                     <small>{errors.message}</small>
                 </div>
 
-                <button type="submit" className="button-1" disabled={isSubmitting}> {/* Prevents multiple clicks */}
+                <button type="submit" className="button-2" disabled={isSubmitting}> {/* Prevents multiple clicks */}
                     <b>{isSubmitting ? "Sending..." : "Send Message"}</b>
                 </button>
             </form>
