@@ -20,7 +20,9 @@ import CatAdoption7 from '../../assets/Pets-Adoption/Cats/cat-adoption-7.jpg'
 import OtherAdoption1 from '../../assets/Pets-Adoption/Others/other-adoption-1.jpg'
 import OtherAdoption2 from '../../assets/Pets-Adoption/Others/other-adoption-2.jpg'
 import OtherAdoption3 from '../../assets/Pets-Adoption/Others/other-adoption-3.jpg'
-import { Link } from 'react-router'
+
+import PetDescriptionModal from './PetDescriptionModal'
+import { useState } from 'react'
 
 const pets = [
     // ---------------- Dogs ----------------
@@ -53,25 +55,40 @@ const pets = [
 
 export default function PetList({ filter }) {
 
+    const [selectedPet, setSelectedPet] = useState(null);
+    const [isModalOpen, setIsModelOpen] = useState(false);
+
     const filteredPets = pets.filter((pet) => {
         if (filter === "all" || pet.type === filter) return true;
         else return false;
     }); // .filter() uses that boolean to decide whether to keep the pet or not.
 
+    const handlePetClick = (pet) => {
+        setSelectedPet(pet);
+        setIsModelOpen(true);
+    }
+
+    const handleCloseModal = () => {
+        setIsModelOpen(false);
+        setSelectedPet(null);
+    }
+
     return (
-        <section className="pet-list">
-            {filteredPets.map((pet) => {
-                return (
-                    <div key={pet.id} className={`pet-card ${pet.type}`}>
-                        <img src={pet.img} alt={pet.name + "-image"} />
-                        <h2>{pet.name}</h2>
-                        <p><strong>Gender:</strong> {pet.gender}</p>
-                        <p><strong>Age:</strong> {pet.age}</p>
-                        <p><strong>Arrived:</strong> {pet.arrived}</p>
-                        <Link to="/contact"><b>Adopt Pet</b></Link>
-                    </div>
-                );
-            })}
-        </section>
+        <>
+            <section className="pet-list">
+                {filteredPets.map((pet) => {
+                    return (
+                        <div key={pet.id} className={`pet-card ${pet.type}`}>
+                            <img src={pet.img} alt={pet.name + "-image"} />
+                            <h2>{pet.name}</h2>
+                            <p><strong>Gender:</strong> {pet.gender}</p>
+                            <button className='view-details-btn' onClick={() => handlePetClick(pet)}><b>View Details</b></button>
+                        </div>
+                    );
+                })}
+            </section>
+
+            <PetDescriptionModal pet={selectedPet} isOpen={isModalOpen} onClose={handleCloseModal} />
+        </>
     )
 }
