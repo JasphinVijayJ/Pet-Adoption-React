@@ -1,19 +1,20 @@
-/* Most Common Used */
-.gradient-highlight {
-  background: linear-gradient(to right, #ee0979, #ff6a00);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* -------------------------------------------------------------- */
-
 body {
   margin: 0;
   line-height: 1.5;
   color: #555;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-top: 80px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* -------------------------------------------------------------- */
+
+/* Most Common Used */
+.gradient-highlight {
+  background: linear-gradient(to right, #ee0979, #ff6a00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* -------------------------------------------------------------- */
